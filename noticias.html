@@ -46,16 +46,20 @@
                    
                     <form>
                         <label for="nome">Nome: </label><br>
-                        <input type="text" id="nome">
+                        <input type="text" id="nome" onkeyup="validaNome()">
+                        <div id="txtNome"></div>
                         
                         <br><label for="email">E-mail: </label><br>
-                        <input type="email" id="email">
-                    
+                        <input type="email" id="email" onkeyup="validaEmail()">
+                        <div id="txtEmail"></div>
+
                         <br><label for="comentario">Comentário: </label><br>
-                        <textarea name="comentario" id="comentario" cols="65" rows="5"></textarea>
+                        <textarea name="comentario" id="comentario" cols="65" rows="5" onkeyup="validaComentario()"></textarea>
+                        <div id="txtComentario"></div>
+
+                        
                         <br>
-                        <br>
-                        <button>Enviar</button>
+                        <button onclick="enviar()">Enviar</button>
 
                     </form>
                 </div>                
@@ -65,23 +69,27 @@
                 <div class="txend">
                     <h2>Endereço</h2>
         
-                    <p>Edifício The Office, Av. Mário Ypiranga, nº 315 </p>
-                    <p>SALA 1210 - Adrianópolis, Manaus - AM, 69057-250</p>
+                    <p>Av. Condessa de Vimieiros, 700 - Centro, Itanhaém - SP, 11740-000</p>
+                    
                 </div>
-                        
+                       
                 <div class="containerright mr-50">
                     <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.93034099266!2d-60.0161213854239!3d-3.1131326977330787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c05c5e1e1bacf%3A0xce32684e6fa7b0be!2sRecord%20TV%20Manaus!5e0!3m2!1spt-BR!2sbr!4v1610138824103!5m2!1spt-BR!2sbr" 
-                     width="680" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65369.14331610932!2d-46.81975204391602!3d-24.1776669220225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d59cc9dadafb%3A0x22873e55a1d8b825!2sFunda%C3%A7%C3%A3o%20Nacional%20do%20%C3%8Dndio%20-%20Funai!5e0!3m2!1spt-BR!2sbr!4v1610489732378!5m2!1spt-BR!2sbr" 
+                    width="680" 
                     height="400" 
                     frameborder="0" 
                     style="border:0;" 
                     allowfullscreen="" 
                     aria-hidden="false" 
                     tabindex="0"
+                    onmousemove="mapaZoomMenos()"
+                    onmouseout="mapaNormal()"
+                    id="mapa"
                     ></iframe>                
                 </div>
-
-                 
+               
+               
+         <script src="assets/js/script.js"></script>    
 </body>
 </html>
